@@ -1,0 +1,139 @@
+/*
+ *
+ */
+
+@font-face {
+    font-family: 'Exo';
+    src: url('/static/fonts/Exo/Exo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway/Raleway-Regular.ttf');
+}
+
+
+html{
+
+}
+
+body {
+    background-color: #fffcf7;
+    max-width: 5in;
+    padding: 1em;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 300;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header {
+    font-size: 36px;
+    font-family: 'Exo', Arial, sans-serif;
+}
+
+nav {
+    padding: 25px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #248;
+}
+
+nav > a:hover{
+    text-decoration: none;
+    color: #48f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo';
+    color: #248;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 18px;
+
+}
+
+strong {
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #248;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li::before{
+    content: "> ";
+    color: #224;
+    text-decoration: strong;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.25em;
+    margin-left: -1.25em;
+}
+
+@supports(display: grid) {
+    @media(min-width: 870px) {
+        html {
+            height: 100%;
+        }
+        body {
+            padding: 0;
+            max-width: 70%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 10%  50%  40%;
+            grid-template-areas: "blank header"
+                                 "nav content"
+                                 "footer content";
+            align-items: start;
+            grid-column-gap: 10px;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+            display: flex;
+            flex-direction: column;
+            font-size: 22px;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        #content {
+            grid-area: content;
+        }
+    }
+}

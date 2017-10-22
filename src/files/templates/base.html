@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{site_name}} — {{title}}</title>
+        <link rel="stylesheet" type="text/css" href="/static/main.css"/>
+        {% block head %}
+        {% endblock %}
+    </head>
+
+    <body>
+        {% include 'header.html' %}
+        {% include 'nav.html' %}
+        
+        <section id="content">
+        {% block content %}
+        {% endblock %}
+        </section>
+
+        {% include 'footer.html' %}
+    </body>
+</html>

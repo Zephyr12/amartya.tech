@@ -1,0 +1,48 @@
+title: A Small Bio
+---
+# Hi!
+
+I am Amartya Vadlamani, a second-year computer science student at UCL. I mostly
+program recreationally but I am starting to branch out and do more professional
+contracting work. My main interests include machine learning, graphics
+programming and programming language theory. I mostly program in Python, C and
+Rust depending on the occasion and am familiar with the latest HTML5 and CSS3
+trends and features.
+
+## Where are you?
+
+You are at my personal website, where I host my projects and occasionally
+upload post-mortems about them. As you can see it is currently empty. This is
+because I just finished transitioning the site over to using a custom static
+site generator that I wrote in Python using YAML, Jinja2 and Markdown.
+
+## Achievements
+
+I do a lot of things in my spare time. I'm even proud of some of them.
+
+When I was 14, I participated in 
+[Ludem Dare 27](http://ludumdare.com/compo/ludum-dare-27/?action=preview&uid=27354), 
+a two day game jam. I started and finished a whole game working just by myself
+back when the only language I knew was C# and could only use it with Unity. I
+still remember trying to stay up all night to get the AI behavior bug free and
+functional in-time for me to do the art and level design the next day.
+
+I built an [invoice tracker](https://github.com/Zephyr12/Comp-4) for small
+scale companies to use in their internal systems. The code isn't amazing and my
+git hygiene was appalling, but it was the first project that I created that
+actually got anywhere. Anywhere, in this case, being a spot as an internal system
+at a small consulting company.
+
+Last year I built a [VR-Video Tagger](https://github.com/Zephyr12/COMP103_AppProject).
+The system allowed you to upload a 360VR Video and presented you with an
+interface that enabled the user to tag interesting elements in the video with
+interactive tags that included full web content. This was then exported out to
+a custom viewer that would then play the video and allow the user to interact
+with the tags projected in 3d space. I got to the point where I could browse
+Wikipedia in full VR using the application. I wrote the tagging engine in
+Django and a small Java Plugin that integrated the WebView with the 3D
+environment by rendering the WebView into it's own texture which could then be
+sent to the GL context that was doing the 3D rendering.
+
+Finally, this site generator. Mostly because the actual code is so small and
+achieves so much in such a small space.
