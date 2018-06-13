@@ -14,7 +14,11 @@
 
 
 html{
+    max-width:: 480px;
+}
 
+#content {
+    width: 100%;
 }
 
 body {
@@ -37,6 +41,29 @@ header {
 
 nav {
     padding: 25px;
+}
+
+#post-list {
+    font-size: 18px;
+    display: none;
+}
+
+#post-list > li  ul {
+    padding-left: 1em;
+}
+
+#post-list, #post-list ul {
+    padding-left: 1em;
+}
+
+#post-list  li::before{
+    content: "";
+    color: #224;
+    text-decoration: strong;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.25em;
+    margin-left: -1.25em;
 }
 
 nav > a {
@@ -98,6 +125,10 @@ li::before{
     margin-left: -1.25em;
 }
 
+pre, pre code{
+    white-space: pre-wrap;
+}
+
 @supports(display: grid) {
     @media(min-width: 870px) {
         html {
@@ -115,6 +146,11 @@ li::before{
                                  "footer content";
             align-items: start;
             grid-column-gap: 10px;
+        }
+
+        #post-list {
+            display: block;
+            margin-top: 0.5em;
         }
 
         header {

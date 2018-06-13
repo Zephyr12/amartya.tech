@@ -1,6 +1,8 @@
 title: Post-Index
 ---
-{% for year, year_list in (site_pages.post.items()|sort(attribute='1.date.day')|sort(attribute='1.date.month')|sort(attribute='1.date.year')|groupby('1.date.year'))[:1] %}
+# Archive
+{% if site_pages.post.items()|selectattr('1.indexed') is equalto [] %}
+{% for year, year_list in (site_pages.post.items()|selectattr('1.indexed')|sort(attribute='1.date.day')|sort(attribute='1.date.month')|sort(attribute='1.date.year')|groupby('1.date.year'))[:1] %}
 ##{{ year }}
 {% for month, month_list in year_list|groupby('1.date.month') %}
 ###{{ month }}
@@ -9,3 +11,7 @@ title: Post-Index
 {% endfor %}
 {% endfor %}
 {% endfor %}
+{% else %} 
+## There isn't anything here, yet...
+{% endif %}
+
