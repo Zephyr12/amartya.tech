@@ -1,0 +1,11 @@
+title: Post-Index
+---
+{% for year, year_list in (site_pages.post.items()|sort(attribute='1.date.day')|sort(attribute='1.date.month')|sort(attribute='1.date.year')|groupby('1.date.year'))[:1] %}
+##{{ year }}
+{% for month, month_list in year_list|groupby('1.date.month') %}
+###{{ month }}
+{% for post in month_list %}
+* [{{post.1.title}}](/post/{{post.0.split(".")[0]}}.html)
+{% endfor %}
+{% endfor %}
+{% endfor %}

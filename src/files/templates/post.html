@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article id="post">
+    <section id="post-meta">
+        <h1 id="main-title"> {{title}} </h1>
+        <p> Date: {{date.year}} – {{date.month}} – {{date.day}} </p>
+    </section>
+    {{documents[0]}}
+</article>
+{% endblock %}
